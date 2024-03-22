@@ -1,0 +1,27 @@
+{{{head}}}
+
+<body>
+    <main>
+        <h1>Sophisticated Bookstore</h1>
+        <div class="cards-div">
+            {{#books}}
+            <div class="card-cell">
+                <a href="http://localhost:3000/books/{{id}}">
+                    <div class="card">
+                        <div class="card-img-container">
+                            <img src="images/{{image}}" alt="{{image}}">
+                        </div>
+                        <div class="card-text">
+                            <h2>{{title}}</h2>
+                            <p>{{price}}</p>
+                            {{{available}}}
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{/books}}
+        </div>
+    </main>
+</body>
+
+{{{footer}}}

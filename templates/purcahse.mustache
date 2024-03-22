@@ -1,0 +1,25 @@
+{{{head}}}
+
+<body>
+    <main>
+        <h1>Congradulations on your purcahse {{first}} {{last}}!</h1>
+        <p>Order confirmation for the following items sent to {{email}}</p>
+        <div class="cards-div">
+            {{#books}}
+            <div id="{{id}}" class="card-cell">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/{{image}}" alt="{{image}}">
+                    </div>
+                    <div class="card-text">
+                        <h2>{{title}}</h2>
+                        <p>{{price}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/books}}
+        </div>
+        <script src="js/cart.js"></script>
+    </main>
+</body>
+{{{footer}}}

@@ -1,0 +1,6 @@
+BookID,Title,Author,Genre,Price,ImageFileName,Available
+1,The Great Gatsby,F. Scott Fitzgerald,Classic,10.99,great_gatsby.jpg,TRUE
+2,1984,George Orwell,Dystopian,9.99,1984.jpg,FALSE
+3,To Kill a Mockingbird,Harper Lee,Fiction,8.99,to_kill_a_mockingbird.jpg,TRUE
+4,The Catcher in the Rye,J.D. Salinger,Classic,7.99,catcher_in_the_rye.jpg,TRUE
+5,The Hobbit,J.R.R. Tolkien,Fantasy,6.99,the_hobbit.jpg,FALSE

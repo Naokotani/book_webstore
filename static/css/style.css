@@ -1,0 +1,301 @@
+:root {
+    /* Color Palllete */
+    --deep-twilight: #363062;
+    --twilight-blue: #435585;
+    --dusky-sky: #818FB4;
+    --pale-parchment: #F5E8C7;
+    --danger: #FF0000;
+    --success: #008800;
+
+    /* Color Intentions */
+    --background: var(--pale-parchment);
+    --text: var(--deep-twilight);
+    --lineColor: var(--dusky-sky);
+    --blockquote: var(--twilight-blue);
+    --block-text: var(--pale-parchment);
+    --card-bg: var(--dusky-sky);
+    --card-bg: var(--light-parchment);
+    --header-bg: var(--twilight-blue);
+    --header-fg: var(--pale-parchment);
+    --footer-bg: var(--dusky-sky);
+    --footer-fg: var(--pale-parchment);
+    --linkColor: var(--twilight-blue);
+    --linkHover: var(--twilight-blue);
+    --navLinkColor: var(--pale-parchment);
+    --authorColor: var(--twilight-blue);
+    --buttonColor: var(--twilight-blue);
+    --buttonHoverColor: var(--deep-twilight);
+    --buttonDisabledColor: var(--dusky-sky);
+
+    /*Styles*/
+    --line: solid 1px var(--lineColor);
+    --headerHeight: 5rem;
+    --containerPadding: 10vw;
+
+    --boxShadow: 0 2px 18px rgb(34 34 34 / 20%);
+    --cardTransition: box-shadow 200ms;
+
+    /* Fonts */
+    --headingFont: 'Source Sans Pro', sans-serif;
+    --bodyFont: 'Libre Baskerville', serif;
+    --baseFontSize: 100%;
+    --h1: 3.052rem;
+    --h2: 2.441rem;
+    --h3: 1.953rem;
+    --h4: 1.563rem;
+    --h5: 1.25rem;
+    --smallText: 0.8rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /*Color intentions*/
+        --background: var(--deep-twilight);
+        --text: var(--pale-parchment);
+        --line: var(--dusky-sky);
+        --blockquote: var(--twilight-blue);
+        --block-text: var(--pale-parchment);
+        --header-bg: var(--twilight-blue);
+        --header-fg: var(--pale-parchment);
+        --footer-bg: var(--dusky-sky);
+        --footer-fg: var(--pale-parchment);
+        --navLinkColor: var(--pale-parchment);
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: var(--baseFontSize);
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--linkColor);
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+}
+
+main {
+    padding: var(--containerPadding);
+    padding-top: 10rem;
+    max-width: 1920px;
+}
+
+hr {
+    border-bottom: var(--line);
+}
+
+blockquote {
+    padding: 5rem;
+    background: var(--blockquote);
+    color: var(--block-text);
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+.h1 {
+    font-size: var(--h1);
+}
+
+.h2 {
+    font-size: var(--h2);
+}
+
+.h3 {
+    font-size: var(--h3);
+}
+
+.h4 {
+    font-size: var(--h4);
+}
+
+.h5 {
+    font-size: var(--h5);
+}
+
+header nav.main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    --linkColor: var(--navLinkColor);
+    height: var(--headerHeight);
+    background: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.main-nav ul {
+    display: flex;
+    margin-right: var(--containerPadding);
+}
+
+nav.main-nav h2 {
+    font-size: var(--h3);
+    color: var(--header-fg);
+    margin: 0 0 0 var(--containerPadding);
+}
+
+nav.main.nav li {
+    line-height: var(--h3);
+}
+
+nav.main-nav li+li {
+    margin-left: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.cards-div {
+    --gridCols: 3;
+    display: grid;
+    grid-template-columns: repeat(var(--gridCols), 1fr);
+    gap: 10vw;
+    margin: auto;
+}
+
+.card-cell {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-img-container {
+    overflow: hidden;
+    height: 300px;
+}
+
+.card h2 {
+    font-size: var(--h5);
+    margin: 0;
+    min-height: calc(var(--h5) * 2);
+}
+
+.card h2:hover {
+    color: var(--linkHover);
+}
+
+.card p {
+    margin: 0;
+}
+
+.card {
+    border-radius: 5px;
+    width: 250px;
+    background: var(--card-bg);
+    color: var(--card--fg);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .16), 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+.card:hover {
+    color: var(--linkHover);
+}
+
+.card img {
+    display: block;
+    max-width: 250px;
+}
+
+.card-text {
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.book-image {
+    float: right;
+    width: 20%;
+}
+
+.book-image img {
+    width: 90%;
+    margin: 0 0 10% 10%;
+}
+
+
+.book {
+    width: 80%;
+    float: left;
+}
+
+.book h1 span {
+    margin-left: 1rem;
+    color: var(--authorColor);
+}
+
+.book h1 {
+    border-bottom: var(--line);
+}
+
+small.available {
+    display: block;
+    height: var(--smallText);
+}
+
+small.danger {
+    color: var(--danger);
+}
+
+form.checkout {
+    display: grid;
+    width: 10rem;
+    margin-top: 3rem;
+}
+
+form.checkout button {
+    margin-top: 1rem;
+}
+
+form.checkout label {
+    margin: 5px 0;
+}
+
+button {
+    background: var(--buttonColor);
+    color: var(--pale-parchment);
+    border: none;
+    margin: 5px 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--buttonHoverColor);
+}
+
+button:disabled {
+    background: var(--buttonDisabledColor);
+    cursor: not-allowed;
+}
+
+#book-added {
+    color: var(--success);
+}

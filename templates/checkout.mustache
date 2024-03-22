@@ -1,0 +1,33 @@
+{{{head}}}
+
+<body>
+    <main>
+        <div class="cards-div">
+            {{#books}}
+            <div id="{{id}}" class="card-cell">
+                <div class="card">
+                    <div class="card-img-container">
+                        <img src="images/{{image}}" alt="{{image}}">
+                    </div>
+                    <div class="card-text">
+                        <h2>{{title}}</h2>
+                        <p>{{price}}</p>
+                        <button type="button" onclick="handleRemoveCart({{id}})">Remove</button>
+                    </div>
+                </div>
+            </div>
+            {{/books}}
+        </div>
+        <form class="checkout" method="POST">
+            <label for="first-name">First Name</label>
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <label for="last-name">Last Name</label>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="email" required>
+            <button type="submit">buy</button>
+        </form>
+        <script src="js/cart.js"></script>
+    </main>
+</body>
+{{{footer}}}
