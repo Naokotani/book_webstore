@@ -264,6 +264,10 @@ small.danger {
     color: var(--danger);
 }
 
+.success {
+  color: var(--success);
+}
+
 form.checkout {
     display: grid;
     width: 10rem;

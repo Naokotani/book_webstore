@@ -1,0 +1,26 @@
+{{{ head }}}
+    <main>
+        <h1>Admin panel</h1>
+        <p>
+            To change the availability of a book toggle the selecto to the
+            appopriate value.
+        </p>
+        
+        <form id="admin-form"> 
+            <ul>
+                {{#books}}
+                <li>
+                    <label for="{{id}}">{{title}} {{available}}</label>
+                    <select id="{{id}}" name="{{id}}">
+                        <option value="TRUE" {{isTrue}}>Available</option>
+                        <option value="FALSE" {{isFalse}}>Sold Out</option>
+                    </select>
+                </li>
+                {{/books}}
+            </ul>
+            <button type="submit">Update Availability</button>
+            <span id="post-result"></span>
+        </form>
+        <script src="/js/admin.js"></script>
+    </main>
+{{{ footer }}}

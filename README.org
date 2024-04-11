@@ -1,0 +1,8 @@
+* Installation
+I decided to write this project using the bun runtime to get some extra practice with it. You can either run the project by [[https://bun.sh/][installing Bun]] and then running =bun install= to install dependencies and then =bun run index.ts=. It will run on port 3000 by default. Alternatively, I included an executable in the root directory which should run on Linux without bun installed. /You cannot run this project with node/. It must be run either on Linux with the executable or with Bun.
+
+* Usage
+The application requires the CSV file to be present in the /data directory on startup. It then reads the file and places the data into a SQLite database that is used throughout the application to read and write data. In order to track session information, I used the =cookieParser()= middleware. These cookies will track what books a user has in their cart and removed after a successful purchase. I also added in some admin functionality to manipulate the book inventory. You can access this functionality by navigating to =http://localhost:3000/admin=  
+
+* Additional Notes
+Ideally in a real world application "book availability" would be an integer that represents the actual remaining stock of books, but in the case of the =booksdata.csv= file it is represented with a boolean. I added the admin page as a way to manipulate the stock because I thought that books becoming unavailable after every purchase felt a bit unrealistic. 
